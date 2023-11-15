@@ -1,0 +1,14 @@
+version: "3.4"
+services:
+  api:
+    image: node:16
+    working_dir: /app
+    volumes:
+      - "./app:/app"
+    env_file:
+      - "config/config.env"
+      - "config/secrets.env"
+    ports:
+      - "3002:3000"
+      - "9229:9229"      
+    command: ["npm", "run", "watch"]

@@ -1,0 +1,10 @@
+[files]
+ignore = node_modules/*
+
+[tools]
+linters = eslint
+
+[tool_eslint]
+config = app/.eslintrc.json
+working_dir = app
+install = true
